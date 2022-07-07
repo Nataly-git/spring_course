@@ -30,6 +30,8 @@ public class Test1 {
 //            }
 //            session.getTransaction().commit();
 
+            //////////////////////////////////////
+
             session.beginTransaction();
             List list = session.createQuery("select d from departments d join fetch d.emps e").getResultList();
             for(Object object : list) {
